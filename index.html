@@ -1,2 +1,565 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المُصطَفٰی اکیڈمی | Quran Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Naskh Arabic', Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #35104d, #6d2c8d);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #4b176d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.25);
+}
+
+header h1 {
+    margin: 12px 0 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 6px 0 0;
+    font-size: 17px;
+}
+
+nav {
+    background: white;
+    padding: 13px 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b176d;
+    margin: 5px 8px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.hero {
+    padding: 65px 20px;
+    text-align: center;
+    background:
+        linear-gradient(135deg, rgba(75,23,109,.95), rgba(125,60,163,.92));
+    color: white;
+}
+
+.hero h2 {
+    font-size: 34px;
+    margin: 0 0 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 25px;
+    background: #d4af37;
+    color: #35104d;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 45px 20px;
+    max-width: 950px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    color: #4b176d;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.about-text {
+    text-align: center;
+    line-height: 2.2;
+    font-size: 17px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 25px 18px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 3px 12px #ddd;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #4b176d;
+    font-size: 21px;
+}
+
+.card p {
+    line-height: 1.9;
+}
+
+.teacher {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.teacher-icon {
+    font-size: 55px;
+}
+
+.teacher h3 {
+    color: #4b176d;
+    margin-bottom: 5px;
+}
+
+.form-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px #ddd;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #4b176d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#formMessage {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.contact {
+    text-align: center;
+    background: #eee;
+    max-width: none;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 29px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.3);
+    z-index: 999;
+}
+
+footer {
+    background: #35104d;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+@media(max-width:600px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    nav a {
+        margin: 3px 5px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">☪</div>
+    <h1>المُصطَفٰی اکیڈمی</h1>
+    <p>قرآن و اسلامی تعلیمات کا آن لائن ادارہ</p>
+</header>
+
+<nav>
+    <a href="#home">ہوم</a>
+    <a href="#about">ہمارے بارے میں</a>
+    <a href="#courses">کورسز</a>
+    <a href="#teacher">استاد</a>
+    <a href="#admission">داخلہ</a>
+    <a href="#contact">رابطہ</a>
+</nav>
+
+<div class="hero" id="home">
+    <h2>قرآن سیکھیں، زندگی سنواریں</h2>
+
+    <p>
+        ناظرہ قرآن، حفظ قرآن، مسنون دعائیں اور بنیادی اسلامی تعلیمات
+    </p>
+
+    <a class="btn" href="#admission">
+        📋 آن لائن داخلہ لیں
+    </a>
+</div>
+
+<section id="about">
+    <h2>🌙 ہمارے بارے میں</h2>
+
+    <p class="about-text">
+        المُصطَفٰی اکیڈمی میں بچوں اور بڑوں کے لیے
+        قرآن پاک اور بنیادی اسلامی تعلیمات آسان،
+        مؤثر اور باقاعدہ انداز میں سکھائی جاتی ہیں۔
+        ہمارا مقصد قرآن کریم کی تعلیم کو عام کرنا
+        اور طلبہ کی دینی تربیت کرنا ہے۔
+    </p>
+</section>
+
+<section id="courses">
+    <h2>📚 ہمارے کورسز</h2>
+
+    <div class="courses">
+
+        <div class="card">
+            <h3>📖 ناظرہ قرآن</h3>
+            <p>
+                صحیح تلفظ اور تجوید کے ساتھ قرآن پاک پڑھنا سیکھیں۔
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🕌 حفظ قرآن</h3>
+            <p>
+                باقاعدہ نگرانی کے ساتھ حفظ قرآن کا پروگرام۔
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🤲 مسنون دعائیں</h3>
+            <p>
+                روزمرہ زندگی کی ضروری مسنون دعائیں سیکھیں۔
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>☪️ اسلامی تعلیمات</h3>
+            <p>
+                نماز، طہارت اور بنیادی دینی مسائل کی تعلیم۔
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="teacher">
+    <h2>👨‍🏫 ہمارے استاد</h2>
+
+    <div class="teacher">
+        <div class="teacher-icon">📖</div>
+
+        <h3>قرآن و اسلامیات کے استاد</h3>
+
+        <p>
+            ناظرہ قرآن، حفظ قرآن، مسنون دعائیں،
+            نماز، طہارت اور بنیادی اسلامی تعلیمات
+            آسان انداز میں سکھائی جاتی ہیں۔
+        </p>
+    </div>
+</section>
+
+<section id="admission">
+    <h2>📋 آن لائن داخلہ فارم</h2>
+
+    <div class="form-box">
+
+        <form id="admissionForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>طالب علم کا نام *</label>
+                    <input type="text" name="studentName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>والد کا نام *</label>
+                    <input type="text" name="fatherName" required>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>عمر *</label>
+                    <input type="number" name="age" min="3" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label>جنس *</label>
+                    <select name="gender" required>
+                        <option value="">منتخب کریں</option>
+                        <option value="طالب علم">طالب علم</option>
+                        <option value="طالبہ">طالبہ</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label>شہر / ملک</label>
+                <input type="text" name="city" placeholder="مثلاً Jhelum, Pakistan">
+            </div>
+
+            <div class="form-group">
+                <label>WhatsApp نمبر *</label>
+                <input type="tel" name="whatsapp" placeholder="مثلاً 03369678462" required>
+            </div>
+
+            <div class="form-group">
+                <label>کورس منتخب کریں *</label>
+
+                <select name="course" required>
+                    <option value="">کورس منتخب کریں</option>
+                    <option value="ناظرہ قرآن">📖 ناظرہ قرآن</option>
+                    <option value="حفظ قرآن">🕌 حفظ قرآن</option>
+                    <option value="مسنون دعائیں">🤲 مسنون دعائیں</option>
+                    <option value="اسلامی تعلیمات">☪️ اسلامی تعلیمات</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label>کلاس کا پسندیدہ وقت</label>
+                <input type="text" name="classTime" placeholder="مثلاً شام 5 بجے">
+            </div>
+
+            <div class="form-group">
+                <label>سابقہ قرآن تعلیم</label>
+                <textarea
+                    name="previousEducation"
+                    placeholder="اپنی سابقہ قرآن تعلیم کے بارے میں لکھیں">
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <label>اضافی پیغام</label>
+                <textarea
+                    name="message"
+                    placeholder="کوئی اضافی معلومات">
+                </textarea>
+            </div>
+
+            <button class="btn" type="submit" id="submitBtn">
+                📤 داخلہ فارم جمع کریں
+            </button>
+
+            <div id="formMessage"></div>
+
+        </form>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+
+    <h2>📞 رابطہ کریں</h2>
+
+    <p>📱 WhatsApp: 0336-9678462</p>
+
+    <p>📍 Jhelum, Punjab, Pakistan</p>
+
+    <a
+        class="btn"
+        href="https://wa.me/923369678462"
+        target="_blank">
+        💬 WhatsApp پر رابطہ کریں
+    </a>
+
+</section>
+
+<a
+    class="whatsapp"
+    href="https://wa.me/923369678462"
+    target="_blank"
+    aria-label="WhatsApp">
+    ☎
+</a>
+
+<footer>
+    © 2026 المُصطَفٰی اکیڈمی — All Rights Reserved
+</footer>
+
+<script>
+
 const scriptURL =
-"https://script.google.com/macros/s/AKfycbyUNuXiaRLys_REooVM0B6SwYJ7hOQF9bFmUS6LO8vi1rIa8OImqMVxkK7qRFjRZs0w/exec";
+"https://script.google.com/macros/s/AKfycbwe-zYgUVivttXpIzTIkwJn6t1JgIseMOIqezQRe5kpFssBaPH5lHwqSzjqnR2rfhPm/exec";
+
+const form = document.getElementById("admissionForm");
+const message = document.getElementById("formMessage");
+const submitBtn = document.getElementById("submitBtn");
+
+form.addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "⏳ فارم جمع ہو رہا ہے...";
+
+    const formData = new FormData(form);
+
+    const data = {
+        studentName: formData.get("studentName"),
+        fatherName: formData.get("fatherName"),
+        age: formData.get("age"),
+        gender: formData.get("gender"),
+        city: formData.get("city"),
+        whatsapp: formData.get("whatsapp"),
+        course: formData.get("course"),
+        classTime: formData.get("classTime"),
+        previousEducation: formData.get("previousEducation"),
+        message: formData.get("message")
+    };
+
+    try {
+
+        await fetch(scriptURL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(data)
+        });
+
+        message.style.display = "block";
+        message.textContent =
+            "الحمدللہ! آپ کا داخلہ فارم کامیابی سے جمع ہوگیا۔ ہم جلد WhatsApp پر آپ سے رابطہ کریں گے۔";
+
+        message.style.background = "#e8f5e9";
+        message.style.color = "#176b2c";
+
+        form.reset();
+
+    } catch (error) {
+
+        message.style.display = "block";
+        message.textContent =
+            "معذرت! فارم جمع نہیں ہو سکا۔ براہِ کرم دوبارہ کوشش کریں یا WhatsApp پر رابطہ کریں۔";
+
+        message.style.background = "#ffebee";
+        message.style.color = "#b71c1c";
+
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "📤 داخلہ فارم جمع کریں";
+
+});
+
+</script>
+
+</body>
+</html>
