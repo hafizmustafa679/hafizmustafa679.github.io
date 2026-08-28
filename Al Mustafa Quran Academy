@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المُصطَفٰی اکیڈمی</title>
+
+<!-- اردو خوبصورت فونٹ (Google Fonts) -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Naskh Arabic', Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+header {
+    background: #4b176d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+nav {
+    background: white;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b176d;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #4b176d, #7d3ca3);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 25px;
+    background: #d4af37;
+    color: #4b176d; /* پڑھنے میں آسانی کے لیے ڈارک کلر */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+section {
+    padding: 35px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    color: #4b176d;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.card h3 {
+    color: #4b176d;
+}
+
+.contact {
+    text-align: center;
+    background: #eee;
+}
+
+footer {
+    background: #4b176d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>المُصطَفٰی اکیڈمی</h1>
+    <p>قرآن و اسلامی تعلیمات کا آن لائن ادارہ</p>
+</header>
+
+<nav>
+    <a href="#home">ہوم</a>
+    <a href="#about">ہمارے بارے میں</a>
+    <a href="#courses">کورسز</a>
+    <a href="#contact">رابطہ</a>
+</nav>
+
+<div class="hero" id="home">
+
+    <h2>قرآن سیکھیں، زندگی سنواریں</h2>
+
+    <p>
+        ناظرہ قرآن، حفظ قرآن، مسنون دعائیں اور بنیادی اسلامی تعلیمات
+    </p>
+
+    <a class="btn" href="#courses">
+        ہمارے کورسز دیکھیں
+    </a>
+
+</div>
+
+<section id="about">
+
+    <h2>ہمارے بارے میں</h2>
+
+    <p style="text-align:center; line-height:2;">
+        المُصطَفٰی اکیڈمی میں بچوں اور بڑوں کے لیے
+        قرآن پاک اور بنیادی اسلامی تعلیمات آسان اور
+        مؤثر انداز میں سکھائی جاتی ہیں۔
+    </p>
+
+</section>
+
+<section id="courses">
+
+    <h2>ہمارے کورسز</h2>
+
+    <div class="courses">
+
+        <div class="card">
+            <h3>📖 ناظرہ قرآن</h3>
+            <p>صحیح تلفظ اور تجوید کے ساتھ قرآن پاک پڑھنا سیکھیں۔</p>
+        </div>
+
+        <div class="card">
+            <h3>🕌 حفظ قرآن</h3>
+            <p>باقاعدہ نگرانی کے ساتھ حفظ قرآن کا پروگرام۔</p>
+        </div>
+
+        <div class="card">
+            <h3>🤲 مسنون دعائیں</h3>
+            <p>روزمرہ زندگی کی ضروری مسنون دعائیں سیکھیں۔</p>
+        </div>
+
+        <div class="card">
+            <h3>☪️ اسلامی تعلیمات</h3>
+            <p>نماز، طہارت اور بنیادی دینی مسائل کی تعلیم۔</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2>رابطہ کریں</h2>
+
+    <p>📱 WhatsApp: 0336-9678462</p>
+
+    <p>📍 Jhelum, Punjab, Pakistan</p>
+
+    <a class="btn" href="https://wa.me/923369678462" target="_blank">
+        WhatsApp پر رابطہ کریں
+    </a>
+
+</section>
+
+<footer>
+    © 2026 المُصطَفٰی اکیڈمی — All Rights Reserved
+</footer>
+
+</body>
+</html>
