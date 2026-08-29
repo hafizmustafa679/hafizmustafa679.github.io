@@ -1,72 +1,753 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>المُصطَفٰی قرآن اکیڈمی</title>
+<title>المُصطَفٰی اکیڈمی | Al Mustafa Quran Academy</title>
 
-  <meta name="description"
-        content="المُصطَفٰی قرآن اکیڈمی — آن لائن قرآن ناظرہ، حفظ، دعائیں اور اسلامی تعلیم">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&display=swap"
-        rel="stylesheet">
+html{
+    scroll-behavior:smooth;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+body{
+    font-family:'Noto Naskh Arabic',Arial,sans-serif;
+    background:#f8f6fb;
+    color:#222;
+    line-height:1.8;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#3b105c,#6d2b8c);
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border:3px solid #d4af37;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+    background:white;
+    color:#4b176d;
+}
+
+header h1{
+    margin-top:10px;
+    font-size:34px;
+    color:#fff;
+}
+
+header p{
+    font-size:18px;
+}
+
+/* Navigation */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    display:inline-block;
+    color:#4b176d;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px 8px;
+    padding:6px 10px;
+    border-radius:6px;
+}
+
+nav a:hover{
+    background:#4b176d;
+    color:white;
+}
+
+/* Hero */
+.hero{
+    min-height:480px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+    background:
+    linear-gradient(rgba(59,16,92,.88),rgba(59,16,92,.88)),
+    radial-gradient(circle at center,#9b59b6,#3b105c);
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h2{
+    font-size:40px;
+    margin-bottom:15px;
+    color:#ffd95a;
+}
+
+.hero p{
+    font-size:21px;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#d4af37;
+    color:#3b105c;
+    padding:12px 25px;
+    margin:8px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#f0ca4d;
+}
+
+/* Sections */
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:55px 20px;
+}
+
+.section-title{
+    text-align:center;
+    color:#4b176d;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background:#d4af37;
+    margin:8px auto;
+}
+
+/* About */
+.about{
+    text-align:center;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 15px #ddd;
+    padding:30px;
+}
+
+/* Courses */
+.courses{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px 18px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 15px #ddd;
+    transition:.3s;
+    border-top:4px solid #d4af37;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card .icon{
+    font-size:45px;
+}
+
+.card h3{
+    color:#4b176d;
+    margin:8px 0;
+}
+
+/* Teacher */
+.teacher{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 3px 15px #ddd;
+    padding:35px;
+}
+
+.teacher-photo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:#4b176d;
+    color:#ffd95a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+    border:5px solid #d4af37;
+}
+
+.teacher-info{
+    max-width:600px;
+}
+
+.teacher-info h3{
+    color:#4b176d;
+    font-size:27px;
+}
+
+/* Admission */
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 3px 15px #ddd;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    color:#4b176d;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-family:inherit;
+    font-size:16px;
+}
+
+.form-group textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:18px;
+}
+
+/* Contact */
+.contact{
+    background:#eeeaf1;
+    text-align:center;
+}
+
+.contact p{
+    margin:8px;
+    font-size:18px;
+}
+
+/* Footer */
+footer{
+    background:#3b105c;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer span{
+    color:#ffd95a;
+}
+
+/* WhatsApp */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    z-index:2000;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .hero h2{
+        font-size:30px;
     }
 
-    body {
-      font-family: "Noto Naskh Arabic", serif;
-      background: #faf8f2;
-      color: #222;
-      line-height: 1.8;
+    .hero p{
+        font-size:18px;
     }
 
-    header {
-      background: linear-gradient(135deg, #4b176d, #6e2b8a);
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      border-bottom: 4px solid #d4af37;
+    nav a{
+        font-size:14px;
+        margin:2px;
     }
 
-    .logo {
-      width: 90px;
-      height: 90px;
-      margin: auto;
-      border: 3px solid #d4af37;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      color: #4b176d;
-      font-size: 42px;
-      font-weight: bold;
+    section{
+        padding:40px 15px;
     }
 
-    header h1 {
-      font-size: 34px;
-      color: #fff;
-      margin-top: 8px;
+    .teacher{
+        padding:25px 15px;
     }
+}
+</style>
+</head>
 
-    header p {
-      font-size: 18px;
-      color: #f6df82;
-    }
+<body>
 
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,.12
+<header>
+
+    <div class="logo">ﷲ</div>
+
+    <h1>المُصطَفٰی اکیڈمی</h1>
+
+    <p>قرآن و اسلامی تعلیمات کا آن لائن ادارہ</p>
+
+</header>
+
+<nav>
+
+    <a href="#home">ہوم</a>
+    <a href="#about">ہمارے بارے میں</a>
+    <a href="#courses">کورسز</a>
+    <a href="#teacher">استاد</a>
+    <a href="#admission">داخلہ</a>
+    <a href="#contact">رابطہ</a>
+
+</nav>
+
+<!-- Hero -->
+
+<div class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h2>قرآن سیکھیں، زندگی سنواریں</h2>
+
+        <p>
+            ناظرہ قرآن، حفظ قرآن، تجوید، مسنون دعائیں،
+            نماز اور بنیادی اسلامی تعلیمات
+        </p>
+
+        <a href="#admission" class="btn">
+            📝 داخلہ حاصل کریں
+        </a>
+
+        <a href="#courses" class="btn">
+            📖 ہمارے کورسز
+        </a>
+
+    </div>
+
+</div>
+
+<!-- About -->
+
+<section id="about">
+
+    <h2 class="section-title">ہمارے بارے میں</h2>
+
+    <div class="about">
+
+        <p>
+            <strong>المُصطَفٰی اکیڈمی</strong> ایک آن لائن
+            قرآن و اسلامی تعلیمات کا ادارہ ہے جہاں
+            بچوں اور بڑوں کو قرآن پاک اور بنیادی
+            دینی تعلیمات آسان اور مؤثر انداز میں
+            سکھائی جاتی ہیں۔
+        </p>
+
+        <p>
+            ہمارا مقصد قرآن پاک کی تعلیم کو آسان،
+            معیاری اور ہر طالب علم کے لیے قابلِ رسائی بنانا ہے۔
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Courses -->
+
+<section id="courses">
+
+    <h2 class="section-title">ہمارے کورسز</h2>
+
+    <div class="courses">
+
+        <div class="card">
+
+            <div class="icon">📖</div>
+
+            <h3>ناظرہ قرآن</h3>
+
+            <p>
+                صحیح تلفظ، مخارج اور بنیادی تجوید کے
+                ساتھ قرآن پاک پڑھنا سیکھیں۔
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🕌</div>
+
+            <h3>حفظ قرآن</h3>
+
+            <p>
+                باقاعدہ سبق، سبقی اور منزل کی نگرانی
+                کے ساتھ حفظ قرآن کا پروگرام۔
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">📚</div>
+
+            <h3>تجوید القرآن</h3>
+
+            <p>
+                قرآن پاک کو درست مخارج اور تجوید کے
+                اصولوں کے مطابق پڑھنے کی تربیت۔
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🤲</div>
+
+            <h3>مسنون دعائیں</h3>
+
+            <p>
+                روزمرہ زندگی کی ضروری مسنون دعائیں
+                یاد کروائی جاتی ہیں۔
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">☪️</div>
+
+            <h3>اسلامی تعلیمات</h3>
+
+            <p>
+                نماز، طہارت، غسل اور بنیادی دینی
+                مسائل کی تعلیم۔
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🌙</div>
+
+            <h3>اسلامی آداب</h3>
+
+            <p>
+                بچوں کے لیے روزمرہ زندگی کے اسلامی
+                آداب اور اخلاق کی تربیت۔
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Teacher -->
+
+<section id="teacher">
+
+    <h2 class="section-title">ہمارے استاد</h2>
+
+    <div class="teacher">
+
+        <div class="teacher-photo">
+            👨‍🏫
+        </div>
+
+        <div class="teacher-info">
+
+            <h3>حافظ مصطفیٰ</h3>
+
+            <p>
+                قرآن پاک کی تعلیم، ناظرہ قرآن، حفظ قرآن،
+                مسنون دعائیں، نماز اور بنیادی اسلامی
+                تعلیمات کی تدریس۔
+            </p>
+
+            <p>
+                طلبہ کو آسان اور باقاعدہ طریقے سے
+                قرآن پاک سیکھنے میں رہنمائی فراہم کی جاتی ہے۔
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Admission -->
+
+<section id="admission">
+
+    <h2 class="section-title">آن لائن داخلہ فارم</h2>
+
+    <div class="form-box">
+
+        <form onsubmit="sendAdmission(event)">
+
+            <div class="form-group">
+
+                <label>طالب علم کا نام</label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="طالب علم کا نام"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>والد کا نام</label>
+
+                <input
+                    type="text"
+                    id="fatherName"
+                    placeholder="والد کا نام"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>عمر</label>
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="عمر"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>WhatsApp نمبر</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="مثلاً 03361234567"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>کورس منتخب کریں</label>
+
+                <select id="course" required>
+
+                    <option value="">کورس منتخب کریں</option>
+
+                    <option>ناظرہ قرآن</option>
+
+                    <option>حفظ قرآن</option>
+
+                    <option>تجوید القرآن</option>
+
+                    <option>مسنون دعائیں</option>
+
+                    <option>اسلامی تعلیمات</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>پیغام</label>
+
+                <textarea
+                    id="message"
+                    placeholder="اپنا پیغام لکھیں"
+                ></textarea>
+
+            </div>
+
+            <button type="submit" class="btn submit-btn">
+                📱 WhatsApp پر داخلہ بھیجیں
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="contact">
+
+    <h2 class="section-title">رابطہ کریں</h2>
+
+    <p>📱 WhatsApp: 0336-9678462</p>
+
+    <p>📍 Jhelum, Punjab, Pakistan</p>
+
+    <a
+        class="btn"
+        href="https://wa.me/923369678462"
+        target="_blank"
+    >
+        💬 WhatsApp پر رابطہ کریں
+    </a>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        © 2026 <span>المُصطَفٰی اکیڈمی</span>
+        — All Rights Reserved
+    </p>
+
+    <p>
+        قرآن سیکھیں، زندگی سنواریں
+    </p>
+
+</footer>
+
+<!-- WhatsApp Floating Button -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/923369678462"
+    target="_blank"
+    aria-label="WhatsApp"
+>
+    ☎
+</a>
+
+<script>
+
+function sendAdmission(event){
+
+    event.preventDefault();
+
+    const studentName =
+        document.getElementById("studentName").value;
+
+    const fatherName =
+        document.getElementById("fatherName").value;
+
+    const age =
+        document.getElementById("age").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const course =
+        document.getElementById("course").value;
+
+    const message =
+        document.getElementById("message").value;
+
+    const whatsappNumber = "923369678462";
+
+    const text =
+`السلام علیکم!
+
+المُصطَفٰی اکیڈمی میں داخلہ کی درخواست:
+
+طالب علم کا نام: ${studentName}
+
+والد کا نام: ${fatherName}
+
+عمر: ${age}
+
+WhatsApp نمبر: ${phone}
+
+منتخب کورس: ${course}
+
+پیغام: ${message}
+
+جزاکم اللہ خیراً`;
+
+    const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(text);
+
+    window.open(url, "_blank");
+
+}
+
+</script>
+
+</body>
+</html>
